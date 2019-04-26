@@ -13,6 +13,7 @@ void menu();
 void ejercicio1();
 //Verificar número perfecto
 void ejercicio2();
+//Permutaciones posibles
 void ejercicio3();
 
 int main(){
@@ -31,6 +32,7 @@ int main(){
           ejercicio2();
         break;
         case 3://Ejercicio 3
+          ejercicio3();
         break;
         case 0://Salir
           cout << "Finalizó con éxito.\n";
@@ -44,7 +46,9 @@ int main(){
   }
 
   return 0;
-}
+}//Final main()
+
+
 
 //Ejercicio #1
 void ejercicio1(){
@@ -70,13 +74,13 @@ void ejercicio1(){
   for(int i = 0; i <= size; i++){
     cout << "Valor: " << secuencia[i] <<endl;
     cout << "Suma inicial: " << suma << endl;
-
+ 
     //Comparar posición actual con la siguiente
     if(secuencia[i] == secuencia[i+1]){
       suma += secuencia[i];
     }
     if(secuencia[size] == secuencia[0]){
-      suma 
+      suma = secuencia[0] + secuencia[size]; 
     }
     cout << "Suma: "<< suma << endl;
   }
@@ -95,29 +99,37 @@ void ejercicio2(){
   for(int i = 0; i < 1000; i++){
     valores[i] = 0;
   }
-  
+ 
+  //Comprobar  
   for(int i = 1; i < num; i++)
   {
     div = num % i;
     if (div == 0){
-      suma = suma + i;}
+      suma = suma + i;
+    }
     valores[i] = suma;   
   }
-   
+  
+  //Verificar si el número es perfecto e imprimir valores 
   if(suma == num){
     cout << "El número " << num << " es perfecto.\n";
     for(int i = 0; i < 1000; i++){
       if(valores[i] != 0){
-        cout<< valores[i] << " ";}
+        cout<< valores[i] << " ";
       }
+    }
   }
   else{
         cout << "El número " << num << " no es perfecto.\n";}
 }
 
+void ejercicio3(){
+  
+}
+
 //Menú principal
 void menu(){
-  cout << "\tLABORATORIO 2\n"
+  cout << "\n\tLABORATORIO 2\n"
       << "1 - Ejercicio 1\n"
       << "2 - Ejercicio 2\n"
       << "3 - Ejercicio 3\n"
