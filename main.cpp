@@ -123,8 +123,15 @@ void ejercicio2(){
         cout << "El número " << num << " no es perfecto.\n";}
 }
 
+//Ejercicio #4
 void ejercicio3(){
+  string palabra;
+  char word[];
+
+  cout << "Ingrese una palabra: "
+  cin >> palabra;
   
+   
 }
 
 //Menú principal
