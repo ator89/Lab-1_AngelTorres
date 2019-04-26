@@ -48,21 +48,45 @@ int main(){
 
 //Ejercicio #1
 void ejercicio1(){
-  char secuencia[100];
+  int size = 0, suma = 0;
+  cout << "Cantidad de dígitos en la secuencia de par: "<< endl;
+  cin >> size;
   
+  int secuencia[size];
   
-  cout << "Ingrese una secuencia de dígitos par (e: 164379): ";
-  cin >> secuencia;
-  int size = sizeof(secuencia)/sizeof(secuencia[0]);
+  //Inicializar la secuencia
   for(int i = 0; i < size; i++){
-    cout << secuencia[i];
+    cout << "Ingrese un dígito a la vez y presione <enter>: ";
+    cin >> secuencia[i];
   }
+
+  //Imprimir secuencia
+  for(int i = 0; i < size; i++){
+    cout << " " << secuencia[i];
+  }
+  cout << endl;  
+
+  
+  for(int i = 0; i <= size; i++){
+    cout << "Valor: " << secuencia[i] <<endl;
+    cout << "Suma inicial: " << suma << endl;
+
+    //Comparar posición actual con la siguiente
+    if(secuencia[i] == secuencia[i+1]){
+      suma += secuencia[i];
+    }
+    if(secuencia[size] == secuencia[0]){
+      suma 
+    }
+    cout << "Suma: "<< suma << endl;
+  }
+  cout << "La suma es: " << suma << "\n";
 
 }
 
 //Ejercicio #2
 void ejercicio2(){  
-  int num, div, sum=0;
+  int num, div, suma=0;
   int valores[1000];
   
   cout << "Ingrese un número a validar: ";
@@ -76,11 +100,11 @@ void ejercicio2(){
   {
     div = num % i;
     if (div == 0){
-      sum = sum + i;}
-    valores[i] = sum;   
+      suma = suma + i;}
+    valores[i] = suma;   
   }
    
-  if(sum == num){
+  if(suma == num){
     cout << "El número " << num << " es perfecto.\n";
     for(int i = 0; i < 1000; i++){
       if(valores[i] != 0){
