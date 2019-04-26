@@ -126,12 +126,14 @@ void ejercicio2(){
 //Ejercicio #4
 void ejercicio3(){
   string palabra;
-  char word[];
+  char word[] = {};
 
-  cout << "Ingrese una palabra: "
+  cout << "Ingrese una palabra: ";
   cin >> palabra;
   
-   
+  for(int i = 0; i < palabra.length(); i++){
+  
+  }
 }
 
 //Menú principal
